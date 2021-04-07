@@ -1,19 +1,22 @@
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body{
-  font-family: Arial, Helvetica, sans-serif;
+body {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
 
-.header{
+.header {
   display: flex;
   align-items: center;
 
   padding: 20px 70px 20px 32px;
+  margin-bottom: 50px;
 }
-.menu-button{
+.menu-button {
   padding: 0;
   background-color: #fff;
   width: 20px;
@@ -27,22 +30,22 @@ body{
   justify-content: space-between;
 }
 
-.menu-line{
+.menu-line {
   display: block;
 
-  background-color: #1F2022;;
+  background-color: #1f2022;
   width: 20px;
   height: 3px;
 
   border-radius: 20px;
 }
 
-.logo{
+.logo {
   margin-right: 60px;
 }
 
-.input_group{
-  background-color: #EBEBEB;
+.input_group {
+  background-color: #ebebeb;
   border-radius: 22px;
   padding-right: 25px;
 
@@ -53,15 +56,15 @@ body{
   max-width: 830px;
   width: 50%;
 }
-.input-search{
+.input-search {
   background-color: transparent;
   border: none;
+  width: 100%;
 
   padding: 12px 0px 12px 23px;
-
 }
 
-.button-search{
+.button-search {
   border: none;
   width: 19px;
   height: 19px;
@@ -72,34 +75,92 @@ body{
   cursor: pointer;
 }
 
-.icon-search{
+.icon-search {
   fill: #000;
 }
 
-.icons{
+.icons {
   display: flex;
   align-items: center;
 
   margin-left: auto;
 }
-.icons-link{
+.icons-link {
   text-decoration: none;
-  opacity: .24;
+  opacity: 0.24;
 }
 
-.icons-link:hover{
-  opacity: .7;
+.icons-link:hover {
+  opacity: 0.7;
 }
 
-.icons-link:not(:last-child){
+.icons-link:not(:last-child) {
   margin-right: 50px;
 }
 
-.user{
+.user {
   margin-left: 25px;
 }
-.user-avatar{
+.user-avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+
+.container {
+}
+
+.sidebar {
+  padding-left: 32px;
+}
+
+.nav {
+}
+
+.nav-menu {
+  margin: 0 0 60px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0 0 28px 0;
+}
+
+.nav-link {
+  color: #898989;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+}
+
+.nav-link :hover {
+  color: red;
+}
+.nav-link:hover .icon {
+  fill: red;
+}
+
+.nav-item .icon {
+  fill: #898989;
+}
+.nav-text {
+  margin: 0 0 0 13px;
+  color: #898989;
+}
+
+.nav-img {
+  width: 26px;
+  height: 26px;
+
+  border-radius: 50%;
+}
+
+.nav-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+
+  margin-bottom: 30px;
 }
