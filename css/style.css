@@ -15,6 +15,14 @@ body {
 
   padding: 20px 70px 20px 32px;
   margin-bottom: 50px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+
+  z-index: 99;
 }
 .menu-button {
   padding: 0;
@@ -48,6 +56,7 @@ body {
   background-color: #ebebeb;
   border-radius: 22px;
   padding-right: 25px;
+  margin-right: 40px;
 
   display: flex;
   justify-content: space-between;
@@ -62,6 +71,10 @@ body {
   width: 100%;
 
   padding: 12px 0px 12px 23px;
+}
+
+.mobile-search{
+  display: none;
 }
 
 .button-search {
@@ -110,8 +123,29 @@ body {
 .container {
 }
 
+.mobile-sidebar{
+  display: none;
+}
+
 .sidebar {
   padding-left: 32px;
+  width: 200px;
+  background-color: #fff;
+
+  position: fixed;
+  left: 0;
+  top: 114px;
+  height: calc(100% - 114px);
+  overflow: auto;
+}
+
+.content {
+  width: 100%;
+  height: 400px;
+  margin-top: 85px;
+  padding-left: 250px;
+  padding-top: 30px;
+  padding-right: 70px;
 }
 
 .nav {
@@ -163,4 +197,232 @@ body {
   line-height: 23px;
 
   margin-bottom: 30px;
+}
+
+/* 14:11  свайпер */
+
+.video-card{
+
+}
+
+.video-thumb{
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 14px;
+
+  position: relative;
+}
+
+.sumbnail{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.video-duration{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgb(0, 0, 0, 0.3);
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+
+  padding: 3px 9px;
+}
+
+.video-title{
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #19202C;
+
+  margin: 10px 0 4px 0;
+}
+
+.video-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 13px;
+  line-height: 16px;
+  color: #C2C2C2;
+}
+.video-counter{
+  display: flex;
+}
+.video-views{
+  margin-right: 5px;
+}
+
+.video-views::after{
+  content: '';
+  width: 2px;
+  height: 2px;
+  background-color: #C2C2C2;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.slider-buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 66px;
+  position: absolute;
+  top: 15px;
+  right: 8%;
+}
+
+
+
+.channel-title {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #19202c;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 33px;
+
+  margin-bottom: 30px;
+}
+
+.channel-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.channel-text {
+  margin-left: 20px;
+}
+
+.channel{
+  position: relative;
+
+  margin-bottom: 49px;
+}
+.channel-button{
+  cursor: pointer;
+  border: none;
+}
+.channel-button-next{
+
+}
+
+.channel-button-prev{
+  
+}
+
+
+
+
+
+.recomended-video-thumb{
+  width: 100%;
+  height: 250px;
+
+}
+.recomended-sumbnail{
+  width: 100%;
+  height: 250px;
+}
+
+@media (max-width: 860px) {
+  .icons{
+    display: none;
+  }
+  .user-avatar{
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .swiper-wrapper{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .swiper-slide{
+    margin-bottom: 40px;
+  }
+
+  .video-thumb{
+    height: 300px;
+  }
+
+  .sumbnail{
+    height: 300px;
+  }
+
+  .slider-buttons{
+    display: none;
+  }
+  .mobile-search{
+    display: block;
+    margin-left: auto;
+  }
+  .input_group{
+    position: fixed;
+    left: 0;
+    top: -100px;
+    opacity: 0;
+    width: 67%;
+    margin-left: 30px;
+
+    transition:.3s;
+  }
+  .input_group.is-open{
+    top: 20px;
+    opacity: 1;
+  }
+  .menu-button{
+    display: none;
+  }
+  .sidebar{
+    display: none;
+  }
+  .content{
+    padding-left: 32px;
+  }
+  .mobile-sidebar{
+    display: block;
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+  }
+  .mobile-sidebar .nav-link{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-sidebar .nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 17px 0 11px 0;
+
+    border-top: 1px solid #F2F2F2;
+  }
+
+  .nav-text{
+    margin-left: 0;
+    font-size: 10px;
+  }
+
+  .nav-item{
+    margin-bottom: 0;
+
+  }
 }
